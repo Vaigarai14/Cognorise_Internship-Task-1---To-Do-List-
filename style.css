@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2d2d2d;
+}
+
+:root {
+  --text-color: #0f64a3;
+  --font-primary: "Poppins", sans-serif;
+}
+
+/* Title css */
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#main-div {
+  box-shadow: 5px 5px 10px gray;
+  background-color: white;
+  border-radius: 2em;
+  height: fit-content;
+  width: 500px;
+  padding: 1.5em;
+}
+
+#title > h1 {
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 4em;
+  color: white;
+}
+
+#title > h1 > span {
+  color: var(--text-color);
+}
+
+#inputtag,
+.task-score {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputtag {
+  margin-bottom: 1em;
+}
+
+#main-input {
+  padding: 1em 1em 0.5em 1em;
+  width: 20em;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-color: #0f64a3;
+  font-family: var(--font-primary);
+}
+
+#main-input:focus {
+  outline: none;
+  border-bottom-color: #0f64a3;
+}
+
+/* In javascript onclick the border 
+color is trasparent do it in dom */
+
+#addbtn {
+  padding: 0.5em;
+  margin: 0 1em;
+  width: 8em;
+  background-color: var(--text-color);
+  color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-family: 600;
+  font-size: medium;
+  border-color: transparent;
+  box-shadow: 2px 2px 5px gray;
+  margin-left: 2em;
+}
+
+#addbtn:hover {
+  background-color: white;
+  color: #0f64a3;
+  border-color: #0f64a3;
+  font-weight: 600;
+}
+.task-score {
+  margin: 0.5em;
+  padding: 0 0.5em;
+  display: inline-flex;
+  border-radius: 0.5em;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.task-score :first-child {
+  color: gray;
+  font-family: var(--font-primary);
+}
+
+.task-score > h2 {
+  margin: 0.5em;
+  font-family: var(--font-primary);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  position: relative;
+  padding: 0;
+}
+
+li {
+  width: 300px;
+  display: flex;
+  align-self: center;
+  background-color: white;
+  color: #0f64a3;
+  padding: 2em 4.5em;
+  margin: 1.5em;
+  font-size: 1em;
+  text-align: left;
+  font-family: var(--font-primary);
+  list-style-type: none;
+}
+
+ul li::before {
+  content: "";
+  align-self: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMiAyMGE4IDggMCAwIDEtOC04YTggOCAwIDAgMSA4LThhOCA4IDAgMCAxIDggOGE4IDggMCAwIDEtOCA4bTAtMThBMTAgMTAgMCAwIDAgMiAxMmExMCAxMCAwIDAgMCAxMCAxMGExMCAxMCAwIDAgMCAxMC0xMEExMCAxMCAwIDAgMCAxMiAyIi8+PC9zdmc+);
+  background-size: cover;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: 420px;
+  cursor: pointer;
+}
+
+ul li::after {
+  content: "";
+  align-self: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwZjY0YTMiIGQ9Ik03IDIxcS0uODI1IDAtMS40MTItLjU4N1Q1IDE5VjZINFY0aDVWM2g2djFoNXYyaC0xdjEzcTAgLjgyNS0uNTg3IDEuNDEzVDE3IDIxek0xNyA2SDd2MTNoMTB6TTkgMTdoMlY4SDl6bTQgMGgyVjhoLTJ6TTcgNnYxM3oiLz48L3N2Zz4=);
+  background-size: cover;
+  position: absolute;
+  width: 1.4em;
+  height: 1.4em;
+  right: 50px;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  background-color: rgb(215, 215, 215);
+}
+
+.checked::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMxOWMyNDgiIGQ9Im0xMC42IDEzLjhsLTIuMTUtMi4xNXEtLjI3NS0uMjc1LS43LS4yNzV0LS43LjI3NXEtLjI3NS4yNzUtLjI3NS43dC4yNzUuN0w5LjkgMTUuOXEuMy4zLjcuM3QuNy0uM2w1LjY1LTUuNjVxLjI3NS0uMjc1LjI3NS0uN3QtLjI3NS0uN3EtLjI3NS0uMjc1LS43LS4yNzV0LS43LjI3NXpNMTIgMjJxLTIuMDc1IDAtMy45LS43ODh0LTMuMTc1LTIuMTM3cS0xLjM1LTEuMzUtMi4xMzctMy4xNzVUMiAxMnEwLTIuMDc1Ljc4OC0zLjl0Mi4xMzctMy4xNzVxMS4zNS0xLjM1IDMuMTc1LTIuMTM3VDEyIDJxMi4wNzUgMCAzLjkuNzg4dDMuMTc1IDIuMTM3cTEuMzUgMS4zNSAyLjEzOCAzLjE3NVQyMiAxMnEwIDIuMDc1LS43ODggMy45dC0yLjEzNyAzLjE3NXEtMS4zNSAxLjM1LTMuMTc1IDIuMTM4VDEyIDIyIi8+PC9zdmc+);
+}
+
+/* First part */
+
+@media only screen and (max-width: 570px) {
+  #main-div {
+    width: 60vh;
+  }
+
+  #main-input {
+    width: fit-content;
+    margin: 1em;
+    font-size: small;
+  }
+
+  #title > h1 {
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .task-score {
+    display: inline-flex;
+    font-size: x-small;
+  }
+  #addbtn {
+    font-size: small;
+    width: 8em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #main-div {
+    width: 40vh;
+  }
+
+  #main-input {
+    width: fit-content;
+    margin: 1em;
+  }
+
+  #title > h1 {
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  .task-score {
+    display: inline-flex;
+    font-size: xx-small;
+  }
+  #addbtn {
+    font-size: xx-small;
+    width: 8em;
+  }
+}
+
+/* list part */
+
+@media only screen and (max-width: 570px) {
+  ul {
+    position: relative;
+  }
+
+  li {
+    font-size: x-small;
+  }
+
+  ul li::before {
+    right: 375px;
+  }
+}
+
+@media only screen and (max-width: 500) {
+  ul {
+    position: relative;
+  }
+
+  li {
+    font-size: 0.2em;
+  }
+}
