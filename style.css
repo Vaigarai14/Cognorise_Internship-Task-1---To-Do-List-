@@ -119,7 +119,7 @@ ul {
 }
 
 li {
-  width: 300px;
+  width: 50vh;
   display: flex;
   align-self: center;
   background-color: white;
@@ -169,7 +169,8 @@ ul li::after {
 
 @media only screen and (max-width: 570px) {
   #main-div {
-    width: 60vh;
+    width: 70vh;
+    padding: 1em;
   }
 
   #main-input {
@@ -195,11 +196,11 @@ ul li::after {
 
 @media only screen and (max-width: 500px) {
   #main-div {
-    width: 40vh;
+    width: 50vh;
   }
 
   #main-input {
-    width: fit-content;
+    font-size: small;
     margin: 1em;
   }
 
@@ -214,32 +215,30 @@ ul li::after {
   }
   #addbtn {
     font-size: xx-small;
-    width: 8em;
+    width: 7em;
+    margin: 0;
   }
 }
 
 /* list part */
 
 @media only screen and (max-width: 570px) {
-  ul {
-    position: relative;
-  }
 
   li {
-    font-size: x-small;
+    width: 40vh;
+    font-size: xx-small;
   }
 
   ul li::before {
-    right: 375px;
+    right: 300px;
   }
 }
 
-@media only screen and (max-width: 500) {
-  ul {
-    position: relative;
-  }
+@media only screen and (max-width: 400) {
 
   li {
-    font-size: 0.2em;
+    background-color: antiquewhite;
+    width: 10vh;
+    font-size: xx-small;
   }
 }
