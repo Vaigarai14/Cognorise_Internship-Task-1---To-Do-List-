@@ -115,12 +115,11 @@ section {
 }
 
 ul {
-  position: relative;
   padding: 0;
 }
 
 li {
-  width: 50vh;
+  max-width: 400px;
   display: flex;
   align-self: center;
   background-color: white;
@@ -131,6 +130,7 @@ li {
   text-align: left;
   font-family: var(--font-primary);
   list-style-type: none;
+  position: relative;
 }
 
 ul li::before {
@@ -141,7 +141,8 @@ ul li::before {
   width: 1.5em;
   height: 1.5em;
   position: absolute;
-  right: 420px;
+  right: 500px;
+  left: 20px;
   cursor: pointer;
 }
 
@@ -153,7 +154,7 @@ ul li::after {
   position: absolute;
   width: 1.4em;
   height: 1.4em;
-  right: 50px;
+  right: 30px;
   cursor: pointer;
 }
 
@@ -205,6 +206,7 @@ ul li::after {
   #main-input {
     width: 150px;
     margin: 1em;
+    margin-right: 2em;
     font-size: small;
   }
 
@@ -234,7 +236,6 @@ ul li::after {
   }
 
   ul li::before {
-    position: fixed;
     right: 290px;
   }
 
@@ -250,7 +251,6 @@ ul li::after {
   }
 
   ul li::before {
-    position: fixed;
     right: 290px;
   }
 
