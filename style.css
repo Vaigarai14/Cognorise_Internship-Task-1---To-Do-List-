@@ -25,6 +25,7 @@ body {
   height: fit-content;
   width: 500px;
   padding: 1.5em;
+  margin: auto;
 }
 
 #title > h1 {
@@ -169,14 +170,16 @@ ul li::after {
 
 @media only screen and (max-width: 570px) {
   #main-div {
-    width: 70vh;
+    width: 65vh;
     padding: 1em;
+    margin: 0;
   }
 
   #main-input {
     width: fit-content;
     margin: 1em;
     font-size: small;
+    /* margin: 0; */
   }
 
   #title > h1 {
@@ -194,14 +197,15 @@ ul li::after {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 430px) {
   #main-div {
-    width: 50vh;
+    width: 40vh;
   }
 
   #main-input {
-    font-size: small;
+    width: 150px;
     margin: 1em;
+    font-size: small;
   }
 
   #title > h1 {
@@ -214,7 +218,7 @@ ul li::after {
     font-size: xx-small;
   }
   #addbtn {
-    font-size: xx-small;
+    font-size: x-small;
     width: 7em;
     margin: 0;
   }
@@ -223,22 +227,34 @@ ul li::after {
 /* list part */
 
 @media only screen and (max-width: 570px) {
-
   li {
-    width: 40vh;
-    font-size: xx-small;
+    width: 45vh;
+    font-size: small;
+    position: relative;
   }
 
   ul li::before {
-    right: 300px;
+    position: fixed;
+    right: 290px;
+  }
+
+  ul li::after {
+    right: 30px;
   }
 }
 
-@media only screen and (max-width: 400) {
-
+@media only screen and (max-width: 430px) {
   li {
-    background-color: antiquewhite;
-    width: 10vh;
-    font-size: xx-small;
+    width: 25vh;
+    font-size: x-small;
+  }
+
+  ul li::before {
+    position: fixed;
+    right: 290px;
+  }
+
+  ul li::after {
+    right: 30px;
   }
 }
