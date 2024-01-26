@@ -18,7 +18,7 @@ function createelement() {
         ul.appendChild(li)
         inputel.value = ''
         count.push(li)
-        let countlength = taskuncompleted.textContent = count.length
+        taskuncompleted.textContent = count.length;
     }
 
     li.addEventListener('click', (event) => {
