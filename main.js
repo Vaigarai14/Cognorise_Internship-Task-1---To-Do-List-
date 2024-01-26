@@ -1,8 +1,10 @@
 const inputel = document.getElementById('main-input');
 const mainbtn = document.getElementById('addbtn');
-const ul = document.getElementById('ul')
-const li = document.querySelector('li')
+const ul = document.getElementById('ul');
+var taskcompleted = document.getElementById('task-comp-score');
+var taskuncompleted = document.getElementById('task-uncomp-score')
 
+let count = []
 
 function createelement() {
     if (inputel.value.length > 0) {
@@ -15,11 +17,23 @@ function createelement() {
         li.append(img);
         ul.appendChild(li)
         inputel.value = ''
+        count.push(li)
+        let countlength = taskuncompleted.textContent = count.length
     }
 
     li.addEventListener('click', (event) => {
         if (event.target.localName === "li") {
             li.classList.toggle('checked');
+            // let taskcompletedcondtion = event.target.classList.value ?
+            //     taskcompleted.textContent++ && taskuncompleted.textContent-- : taskcompleted.textContent--
+            if (event.target.classList.value === "checked") {
+                taskcompleted.textContent++
+                taskuncompleted.textContent--
+            } else if (event.target.classList.value == "") {
+                taskcompleted.textContent--
+                taskuncompleted.textContent++
+            }
+            // return taskcompletedcondtion;
         }
     })
 
@@ -27,9 +41,7 @@ function createelement() {
         li.remove();
     })
 
-
 }
-
 
 mainbtn.addEventListener('click', createelement);
 
