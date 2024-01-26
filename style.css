@@ -120,6 +120,7 @@ ul {
 
 li {
   max-width: 400px;
+  min-width: 300px;
   box-shadow: 5px 5px 10px gray;
   border-radius: 0.5em;
   color: #0f64a3;
@@ -148,11 +149,10 @@ ul li::before {
   cursor: pointer;
 }
 
-ul li::after {
+.imgstyle {
   display: block;
   content: "";
   align-self: center;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwZjY0YTMiIGQ9Ik03IDIxcS0uODI1IDAtMS40MTItLjU4N1Q1IDE5VjZINFY0aDVWM2g2djFoNXYyaC0xdjEzcTAgLjgyNS0uNTg3IDEuNDEzVDE3IDIxek0xNyA2SDd2MTNoMTB6TTkgMTdoMlY4SDl6bTQgMGgyVjhoLTJ6TTcgNnYxM3oiLz48L3N2Zz4=);
   background-size: cover;
   position: absolute;
   width: 1.4em;
