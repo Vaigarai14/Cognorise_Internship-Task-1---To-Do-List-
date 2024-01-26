@@ -1,8 +1,7 @@
 const inputel = document.getElementById('main-input');
 const mainbtn = document.getElementById('addbtn');
 const ul = document.getElementById('ul')
-
-
+let lis = []
 
 function createelement() {
     if (inputel.value.length > 0) {
@@ -12,7 +11,13 @@ function createelement() {
         ul.appendChild(li)
         inputel.value = ''
     }
+    li.addEventListener('click', (event) => {
+        if (event.target.localName === "li") {
+            li.classList.toggle('checked');
+        }
+    })
 }
+
 
 mainbtn.addEventListener('click', createelement);
 
@@ -22,3 +27,4 @@ inputel.addEventListener('keyup', (event) => {
         createelement()
     }
 })
+

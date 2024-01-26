@@ -24,7 +24,7 @@ body {
   border-radius: 2em;
   height: fit-content;
   width: 500px;
-  padding: 1.5em;
+  padding: 3em;
   margin: auto;
 }
 
@@ -120,16 +120,18 @@ ul {
 
 li {
   max-width: 400px;
-  display: flex;
-  align-self: center;
-  background-color: white;
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 0.5em;
   color: #0f64a3;
   padding: 2em 4.5em;
   margin: 1.5em;
   font-size: 1em;
-  text-align: left;
   font-family: var(--font-primary);
+  text-align: left;
   list-style-type: none;
+  display: flex;
+  align-self: center;
+  background-color: white;
   position: relative;
 }
 
@@ -147,6 +149,7 @@ ul li::before {
 }
 
 ul li::after {
+  display: block;
   content: "";
   align-self: center;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwZjY0YTMiIGQ9Ik03IDIxcS0uODI1IDAtMS40MTItLjU4N1Q1IDE5VjZINFY0aDVWM2g2djFoNXYyaC0xdjEzcTAgLjgyNS0uNTg3IDEuNDEzVDE3IDIxek0xNyA2SDd2MTNoMTB6TTkgMTdoMlY4SDl6bTQgMGgyVjhoLTJ6TTcgNnYxM3oiLz48L3N2Zz4=);
@@ -160,7 +163,7 @@ ul li::after {
 
 .checked {
   text-decoration: line-through;
-  background-color: rgb(215, 215, 215);
+  background-color: rgb(227, 227, 227);
 }
 
 .checked::before {
