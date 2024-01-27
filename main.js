@@ -50,7 +50,6 @@ function createelement() {
     img.addEventListener('click', (event) => {
         li.remove();
         count.pop();
-        console.log(count, "remove");
         let removecondition = event.target.parentNode.className === "checked";
         let removeconditionnull = event.target.parentNode.className === "";
 
