@@ -4,7 +4,6 @@ const ul = document.getElementById('ul');
 var taskcompleted = document.getElementById('task-comp-score');
 var taskuncompleted = document.getElementById('task-uncomp-score')
 
-let count = []
 
 function createelement() {
     var li = document.createElement('li')
@@ -18,12 +17,11 @@ function createelement() {
         li.append(img);
         ul.appendChild(li)
         inputel.value = ''
-        count.push(li);
 
         //& uncompleted list condition
-        const checkeditems = Array.from(count).filter(
+        const checkeditems = Array.from(ul.children).filter(
             item => !item.classList.contains('checked'));
-        taskuncompleted.textContent = checkeditems.length
+        taskuncompleted.textContent = checkeditems.length;
 
     } else {
         alert("⚠ Enter the value more than 3 characters !!!!!!!");
@@ -48,7 +46,6 @@ function createelement() {
 
     img.addEventListener('click', (event) => {
         li.remove();
-        count.pop();
         let removecondition = event.target.parentNode.className === "checked";
         let removeconditionnull = event.target.parentNode.className === "";
 
