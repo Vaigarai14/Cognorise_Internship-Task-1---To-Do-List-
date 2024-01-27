@@ -119,6 +119,7 @@ ul {
 }
 
 li {
+  width: 300px;
   max-width: 300px;
   min-width: 300px;
   box-shadow: 5px 5px 10px gray;
