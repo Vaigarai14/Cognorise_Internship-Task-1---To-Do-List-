@@ -18,14 +18,16 @@ function createelement() {
         li.append(img);
         ul.appendChild(li)
         inputel.value = ''
-        count.push(li)
-        taskuncompleted.textContent = count.length;
-        console.log(count);
+        count.push(li);
+
+        //& uncompleted list condition
+        const checkeditems = Array.from(count).filter(
+            item => !item.classList.contains('checked'));
+        taskuncompleted.textContent = checkeditems.length
 
     } else {
         alert("⚠ Enter the value more than 3 characters !!!!!!!");
     }
-
 
     li.addEventListener('click', (event) => {
         if (event.target.localName === "li") {
@@ -34,20 +36,21 @@ function createelement() {
             let task_null_condition = event.target.classList.value === "";
 
             //! click event to increase and decrease the taskcompleted and uncompleted count
-
             if (taskcondition) {
                 taskcompleted.textContent++
                 taskuncompleted.textContent--
             } else if (task_null_condition) {
                 taskcompleted.textContent--
                 taskuncompleted.textContent++
+
             }
         }
     })
 
     img.addEventListener('click', (event) => {
         li.remove();
-        count.pop()
+        count.pop();
+        console.log(count, "remove");
         let removecondition = event.target.parentNode.className === "checked";
         let removeconditionnull = event.target.parentNode.className === "";
 
@@ -60,6 +63,7 @@ function createelement() {
 
         return removeelements_checked, removeelements_unchecked;
     })
+
 
 }
 
