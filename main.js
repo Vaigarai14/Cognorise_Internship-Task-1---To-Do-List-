@@ -42,7 +42,6 @@ function createelement() {
             } else if (task_null_condition) {
                 taskcompleted.textContent--
                 taskuncompleted.textContent++
-
             }
         }
     })
